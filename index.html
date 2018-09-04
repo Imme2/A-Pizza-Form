@@ -2,16 +2,49 @@
 
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Pizza!</title>
-  <meta name="description" content="A Pizza Form">
-  <meta name="author" content="Imme">
-  <link rel=icon href=img/favicon.ico>
+	<meta charset="utf-8">
 
-  <link rel="stylesheet" href="css/styles.css">
+	<title>Pizza!</title>
+
+	<meta name="description" content="A Pizza Form">
+	<meta name="author" content="Imme">
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel=icon href=img/favicon.ico>
+	<link rel="stylesheet" href="css/styles.css">
+
 </head>
+<body style="display: none;">
 
-<body>
-  <script src="js/scripts.js"></script>
+	<div class="banner">
+		<a href="#" class="active" id="home-button"> Home </a>
+		<a href="#" id="about-us"> About Us </a>
+	</div>
+
+	<div class="fill-screen center view" id="first-screen"> 
+		<button id="start-order" class="btn btn-success middle center"> Order a Pizza </button>
+	</div>
+
+	<div class="fill-screen view" id="order-screen">
+		<div>
+			<label for="pizza-amount">How many Pizzas would you like to order?</label>
+			<input class="form-control" min="1" step="1" id="pizza-amount" type="number"></input>
+		</div>
+	</div>
+
+	<div class="fill-screen view" id="about-us-screen" style="flex-flow: column;">
+		<div style="font-size: 5vmin;font-weight: bold;text-align: center;">
+			We're not actually a pizza place, sorry to dissapoint. <br>
+			Here's a drawn turtle to make you feel better
+		</div>
+		<img src="img/drawnturtle.png">
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Ok bootstrap --> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<script src="js/scripts.js"></script>
 </body>
 </html>
