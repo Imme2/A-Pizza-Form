@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$("#first-screen").show();
 	$("body").show();
 
-	shown = "#first-screen"
+	shown = "#first-screen";
 
 	// Events for buttons, not the most elegant way, but this is just an example.
 	$("#start-order").on('click',function(){
@@ -17,19 +17,19 @@ $(document).ready(function(){
 
 		$("#first-screen").hide();
 		$("#order-screen").show();
-		shown = "#order-screen"
+		shown = "#order-screen";
 	})
 
 	$("#home-button").on('click',function(){
 		// Switch the active class around
 		$(this).addClass("active");
-		$("#about-us").removeClass("active")
+		$("#about-us").removeClass("active");
 
 		// Show and hide the views
 		$(shown).hide();
 		$("#first-screen").show();
-		shown = "#first-screen"
-	})
+		shown = "#first-screen";
+	});
 	$("#about-us").on('click',function(){
 
 		// switch the active around		
@@ -39,8 +39,34 @@ $(document).ready(function(){
 		// show and hide the views
 		$(shown).hide();
 		$("#about-us-screen").show();
-		shown = "#about-us-screen"
+		shown = "#about-us-screen";
 
-	})
-	console.log("hello");
+	});
+
+	$("#classic-crust").on("click",function(){
+		$(this).addClass("btn-success");
+		$("#thin-crust").removeClass("btn-success");
+	});
+
+	$("#thin-crust").on("click",function(){
+		$(this).addClass("btn-success");
+		$("#classic-crust").removeClass("btn-success");
+	});
+
+
+	$("#send-order").on("click",function(){
+		// Hide message about taking a while
+		$("#take-a-while").hide();
+		
+		$(shown).hide();
+		$("#wait-screen").show();
+		shown = "#wait-screen"
+		
+
+		// Show this will take a while after a bit
+		setTimeout(function () {
+  			 $("#take-a-while").show();
+		}, 3000);
+
+	});
 })

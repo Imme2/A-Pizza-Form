@@ -1,47 +1,79 @@
 
 body{
 	background-image: url("../img/bg.png");
+	display: flex;
+	flex-direction: column;
 }
 
 body, html{
 	width: 100%;
 	height: 100%;
-	display: flex;
-	flex-direction: column;
 }
 
 /* Center everything in these divs */
+
 .fill-screen{
+	margin: auto;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	flex-grow: 1;
+	flex-shrink: 0;
 }
 
 
-/*  for all the different app views */
 
 #start-order {
 	font-size: 10vmin;
-	padding: 1.5rem 3rem;
+	padding: 1.5vmin 3vmin;
 }
 
 .btn{ /* i like my buttons round */
 	border-radius: 16px;
 }
 
+.btn-order{
+	color: white;
+	background-color: #1b5fa8;
+	border-color: #1b5fa8;
+}
+
+.btn-group-toggle{
+	display: inline-block;
+	padding: 2vmin;
+}
+
+.btn-group-toggle > .btn{
+	color: black;
+	background-color: rgb(221, 221, 221);
+}
+
+.btn-group-toggle > .btn.active{
+	color:white;
+	background-color: rgb(40, 167, 69);
+}
+
+
+
 label{
 	font-size: 3vmin;
 }
+
+.center{
+	text-align: center;
+}
+
 
 .banner > a {
 	display: block;
 	float: left;
 	color:white;
-	padding: 1rem 1rem;
+	padding: 2vmin 2vmin;
 	text-decoration: none;
 }
+
 
 .banner > a.active{
 	background-color: #015b01;
@@ -52,7 +84,50 @@ label{
 }
 
 .banner{
+	margin: auto;
 	font-size: 5vmin;
 	width: 100%;
 	background-color: green;
+}
+
+
+
+/* CSS Spinner */
+
+.spinner{
+    border-bottom: 16px solid green; 
+    border-top: 16px solid #3498db;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+/* Changes for desktop */
+
+
+@media only screen and (min-width: 768px){
+	.banner > a{
+		padding: 1vmin;
+	}
+
+	.banner{
+		font-size: 3vmin;
+	}
+
+	html{
+		font-size: 3vmin;
+	}
 }
