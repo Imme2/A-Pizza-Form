@@ -72,13 +72,17 @@
 	<div class="fill-screen view" id="wait-screen">
 		<p> Waiting for Pizza to magically appear </p>
 		<div class="spinner"></div>
-		<div id="take-a-while" style="display: none">
+		<div id="take-a-while" style="display: none; text-align:center;">
 			<p> ... This might take a while </p>
-			<a href="https://www.dominos.ca/"> Go to dominoes instead </a>
+			<a href="https://www.dominos.ca/"> Go to dominoes instead </a></br>
+			<a id="play-game" href="#"> Or play a game! </a>
 		</div>
-		<div>
-			<a href="#"> Or play a game! </a>
-		</div>
+	</div>
+
+	<div id="game-screen" class="fill-screen view">
+		<p> Moves: <span id="moves">0</span><button style="padding-left: 2vmin;" id="hint" class="btn">Hint</button></p>
+		<canvas width="400" height="400" style="border: 2px solid black;" id ="game-canvas"></canvas>
+		<p id="congratulations" style="display: none;"> You solved it! </p>
 	</div>
 
 	<div class="fill-screen view" id="about-us-screen" style="flex-flow: column;">

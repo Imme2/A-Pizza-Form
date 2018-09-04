@@ -111,8 +111,21 @@ label{
     100% { transform: rotate(360deg); }
 }
 
+#hint{
+	vertical-align: baseline;
+	margin-left: 2vmin;
+}
 
 
+/* Hiding play button for mobile users */
+
+@media only screen and (max-width: 768px){
+
+	#play-game{
+		display: none;
+	}
+
+}
 
 
 /* Changes for desktop */
